@@ -1,0 +1,224 @@
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+    
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    :root{
+        --cor-primaria: #0d1117;
+        --cor-secundaria: #ffffff;
+        --cor-terciaria: #2563EB;
+        --cor-paragrafo: #8b949e;
+        --cor-hover: #FB923C;
+    }
+    
+    body {
+        /*height: 100vh;*/
+        box-sizing: border-box;
+        background-color: var(--cor-primaria);
+        color: var(--cor-secundaria);
+        min-height: 100vh;
+    }
+
+    p{
+        color: var(--cor-paragrafo);
+        margin-bottom: 35px;
+        font-size: 1.4rem;
+        font-family: 'Montserrat', sans-serif;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .descricao-icones{
+        color: var(--cor-terciaria);
+        font-family: "Stack Sans Headline", sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .introducao{
+        color: var(--cor-terciaria);
+        margin-bottom: 10px;
+        font-size: 2rem;
+        font-family: "Stack Sans Headline", sans-serif;
+    }
+
+    .titulo {
+        color: var(--cor-secundaria);
+        margin-bottom: 5px;
+        font-size: 6rem;
+        font-family: 'Stack Sans Headline', sans-serif;
+        font-weight: 800;
+    }
+
+    .ponto-titulo{
+        color: var(--cor-terciaria);
+    }
+
+    .subtitulo{
+        color: var(--cor-terciaria);
+        margin-bottom: 25px;
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+
+    .apresentacao{
+        min-height: 100vh;
+        margin: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        gap: 80px;
+        min-height: 85vh;
+    }
+
+    .apresentacao__conteudo{
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tecnologias {
+        display: flex;
+        gap: 30px;
+        margin-top: 32px;
+        font-size: 2rem;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .apresentacao__botao{
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .links__principal:hover{
+        transform: scale(1.05);
+        background-color: var(--cor-hover);
+    }
+
+    .links__principal{
+        background-color: var(--cor-terciaria);
+        width: 230px;
+        text-align: center;
+        border-radius: 16px;
+        font-size: 20px;
+        color: var(--cor-secundaria);
+        padding: 18px 0;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .imagem__minha{
+        width: 35%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid var(--cor-terciaria);
+        filter: brightness(0.8) contrast(1.1);
+    }
+
+    .rodape-pai {
+       display: flex;
+       justify-content: center;
+        min-height: 15vh;
+        align-items: center;
+    }
+
+    .item-rodape{
+        border-radius: 16px;
+        border: 2px solid rgba(255,255,255,0.08);
+        color: var(--cor-secundaria);
+        text-decoration: none;
+        text-align: center;
+        width: 220px;
+        padding: 18px 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        transform: translateY(-8px);
+        transition: 0.3s;
+    }
+
+    .item-rodape:hover{
+        transform: scale(1.05);
+        background-color: var(--cor-hover);
+    }
+
+    .item-rodape i{
+        color: var(--cor-terciaria);
+    }
+
+    @media (max-width: 1200px) {
+        .apresentacao {
+             min-height: unset;
+        }
+
+        .introducao {
+            padding: 10% 0% 0% 0%;
+        }
+
+        .apresentacao__botao {
+            margin-bottom: 40px;
+        }
+    }
+
+     @media (max-width: 768px) {
+        .apresentacao {
+            align-items: center;
+            flex-direction: column;
+            gap: 40px; /* Reduzi o espaçamento vertical entre foto e texto */
+        }
+
+        /* Reduz o tamanho do título gigante para caber em telas menores */
+        .titulo {
+            font-size: 3.5rem;
+        }
+
+        .apresentacao__conteudo {
+            max-width: 100%;
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        .imagem__minha {
+            order: -1;
+            width: 160px; /* Tamanho fixo saudável para a foto de perfil no mobile */
+            height: 160px;
+            margin-top: 40px;
+        }
+
+        .introducao {
+            padding: 0;
+        }
+
+        /* Faz os ícones quebrarem de linha se faltar espaço */
+        .tecnologias {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Faz os botões ficarem um embaixo do outro no mobile, resolvendo o maior vazamento */
+        .apresentacao__botao {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+
+        /* Faz os botões ocuparem uma largura fluida adaptada à tela */
+        .links__principal {
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .rodape-pai {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+    }

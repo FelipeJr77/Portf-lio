@@ -1,0 +1,218 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+    
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .cabecalho {
+        padding: 2% 0% 0% 10%
+    }
+
+    .navbar {
+        display: flex;
+        gap: 40px;
+    }
+
+    .navbar__link {
+        color: #2563EB;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .navbar__link:hover {
+        transform: scale(1.05);
+        color: #FB923C;
+    }
+
+    body {
+        /*height: 100vh;*/
+        box-sizing: border-box;
+        background-color: #0d1117;
+        color: #ffffff;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .apresentacao {
+        /*min-height: 100vh;*/
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+
+    .apresentacao__conteudo__esquerdo {
+        flex: 1;
+        max-width: 50%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0% 0% 0% 3%;
+        font-weight: 500;
+    }
+
+    .apresentacao__titulo {
+        font-size: 3.50rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0% 0% 0% 38%;
+    }
+
+    .apresentacao__destaque {
+        color: #2563EB;
+    }
+
+    .apresentacao__texto {
+        background-color: #0b111e; /* Fundo idêntico ao dos cards da direita */
+        border-radius: 12px;       /* Arredonda os cantos da caixinha */
+        padding: 3%;             /* Cria o espaço interno para o texto não sufocar */
+        margin-top: 30px;          /* Empurra o parágrafo de cima para dar o espaço que você queria */
+        border: 1px solid #1e293b;
+        display: flex;
+        gap: 5%;
+        align-items: center;
+    }
+
+    .apresentacao__conteudo__direito {
+        flex: 1;
+        max-width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 200;
+        margin: 0% 4% 0% 0%;
+    }
+
+    .card{
+        background-color: #0b111e;      
+        border: 1px solid #1e293b;     
+        border-radius: 8px;           
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card i {
+        font-size: 1.75rem;        /* Aumenta o tamanho do ícone */
+        color: #2563EB;         /* Adiciona a cor azul brilhante para destacar */
+        margin-bottom: 15px;    /* Cria um espaçamento para o título h3 não ficar colado */
+        display: inline-block;  /* Garante que o espaçamento inferior funcione corretamente */
+        align-items: center;      /* Centraliza o ícone horizontalmente */
+        align-self: center;      /* Centraliza o ícone dentro do card */
+    }
+
+    @media (max-width: 1200px) {
+        .apresentacao {
+            padding: 0 40px;
+        }
+
+        .apresentacao__titulo {
+            margin-bottom: 5px;
+            padding: 0% 0% 0% 30%;
+            margin-top: 20px;
+        }
+
+        .apresentacao__conteudo__esquerdo {
+           max-width: 35%;
+        }
+
+        .apresentacao__texto {
+            margin: 0;
+        }
+
+        .card {
+            width: auto;
+            padding: 17px;
+        }
+    }
+
+    @media (max-width: 912px) {
+        .cabecalho {
+            margin-top: 10px;
+        }
+
+        .apresentacao { 
+            gap: 35px; 
+            flex-direction: column;
+            margin-bottom: 25px;
+        }
+
+        .apresentacao__titulo {
+            margin-top: 25px;
+        }
+
+        .apresentacao__conteudo__esquerdo {
+            max-width: 100%;
+        }
+
+        .apresentacao__conteudo__direito {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .apresentacao {
+            align-items: center;
+            gap: 10px;
+        }
+
+        .apresentacao__conteudo__esquerdo {
+            gap: 15px;
+            font-size: 1.10rem;
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .apresentacao__conteudo__direito {
+            width: 100%;
+             margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 370px) {
+        .apresentacao {
+            padding: 10px 20px;
+            gap: 20px;
+            height: auto;
+        }
+
+        body {
+            overflow: auto;
+        }
+
+        .apresentacao__titulo {
+            font-size: 2.4rem;
+            padding: 0% 0% 0% 0%;
+            align-items: center;
+        }
+
+        .apresentacao__conteudo__esquerdo {
+            font-size: 1rem; 
+        }
+
+        .apresentacao__texto {
+            font-size: 1rem;
+        }
+
+        .apresentacao__conteudo__direito {
+            display: flex;
+            flex-direction: column;
+        }
+    }
