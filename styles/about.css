@@ -186,7 +186,7 @@
         }
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
         .apresentacao {
             padding: 10px 20px;
             gap: 20px;
